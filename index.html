@@ -4,42 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOG</title>
+
     <style>
-        header{
-        background-color: #B4EC0E;
-        color: #FFFFFF;
-         text-align: center;
-         max-width: 800px;
-         margin: 0 auto;
-         padding: 16px;
-         border: 5px solid #131313;
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
         }
-        main {
+
+        header{
+            background-color: #B4EC0E;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding: 16px;
+            border: 5px solid #131313;
+        }
+
+        main{
             background-color: #FFFFFF;
             color: #183C63;
-         max-width: 800px;
-         margin: 0 auto;
-         padding: 16px;
-        }
-        img{
-            width:360px;
-            height: 360px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #131313;
 
-        }
            
-    
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        article {
+             display: flex;
+        }
+
+        img{
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+        }
+
+        div{
+            flex: 1;
+        }
+
+        h2{
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        /* Destaca somente o autor */
+        .artigo-autor{
+            color: #777;
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* Texto do post */
+        .texto{
+            color: #333;
+            line-height: 1.6;
+        }
+
     </style>
 </head>
+
 <body>
+
     <header>
-    <h1>PROFESSORA JULIANA DE GEOGRAFIA</h1>
-    <p>Vou compartilhar conteúdos de Geografia</p>
+        <h1>PROFESSORA JULIANA DE GEOGRAFIA</h1>
+        <p>Vou compartilhar conteúdos de Geografia.</p>
     </header>
-<main>
-    <img src="ju.png" alt="Ícone do site Geografia com fundo verde-lima, bordas pretas e um globo terrestre centralizado em uma rosa dos ventos.">
-    <h2>Meu Primeiro Post</h2>
-    <P>Por Juliana Siqueira</P>
-    <p> BOAS VINDAS AO MEU NOVO BLOG! AQUI VOU COMPARTILHAS CURIOSIDADES DE GEOGRAFIA.</p>
-</main>   
+
+    <main>
+        <article>
+<img src="ju.png" alt="Foto da Professora Juliana">
+
+        <div>
+
+            <h2>Meu Primeiro Post</h2>
+
+            <p class="artigo-autor">Por Juliana Siqueira</p>
+
+            <p class="texto">
+                Boas-vindas ao meu novo blog! Aqui vou compartilhar
+                curiosidades de Geografia, mapas, atividades e dicas
+                para aprender de forma divertida.
+            </p>
+<button>❤️ <span>0</span></button>
+<button>😍 <span>0</span></button>
+        </div>
+        </article>
+<article>
+<img src="terra.JPG" alt="Foto da Professora Juliana">
+
+        <div>
+
+            <h2>Meu Segundo Post</h2>
+
+            <p class="artigo-autor">Por Juliana Siqueira</p>
+
+            <p class="texto">
+                Nova projeção Equal Earth ajusta a representação da área do país, tornando-a mais próxima da realidade geográfica.
+            </p>
+<button>❤️ <span>0</span></button>
+<button>😍 <span>0</span></button>
+        </div>
+</article>
+        
+        
+
+    </main>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach( function (botao){
+        let curtiu = false;
+botao.addEventListener("click",botaoClicado);
+
+function botaoClicado() {
+        console.log("fui clicado");
+        let texto = botao.querySelector ("span");
+        if (curtiu === false) {
+             texto.textContent++;
+             curtiu = true;
+        } else{
+            texto.textContent--;
+            curtiu = false;
+        }
+       
+        }
+    })
+    
+
+</script>
 </body>
 </html>
