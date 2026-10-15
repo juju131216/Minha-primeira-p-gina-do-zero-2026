@@ -4,70 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOG</title>
-
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        header{
-            background-color: #B4EC0E;
-            color: #FFFFFF;
-            text-align: center;
-            max-width: 800px;
-            margin: 20px auto 0;
-            padding: 16px;
-            border: 5px solid #131313;
-        }
-
-        main{
-            background-color: #FFFFFF;
-            color: #183C63;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 2px solid #131313;
-
-           
-            gap: 20px;
-            align-items: flex-start;
-        }
-
-        article {
-             display: flex;
-        }
-
-        img{
-            width: 120px;
-            height: 120px;
-            border-radius: 10px;
-        }
-
-        div{
-            flex: 1;
-        }
-
-        h2{
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        /* Destaca somente o autor */
-        .artigo-autor{
-            color: #777;
-            font-style: italic;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        /* Texto do post */
-        .texto{
-            color: #333;
-            line-height: 1.6;
-        }
-
-    </style>
+<link rel="stylesheet" href="style.css">
+   
 </head>
 
 <body>
@@ -112,32 +50,44 @@
 <button>😍 <span>0</span></button>
         </div>
 </article>
+
+<article>
+<img src="brasil.png" alt="Foto da Professora Juliana">
+
+        <div>
+
+            <h2>Meu Terceiro Post</h2>
+
+            <p class="artigo-autor">Por Juliana Siqueira</p>
+
+            <p class="texto">
+                Uma curiosidade correta e interessante: o Brasil é o único país do mundo atravessado pela Linha do Equador e pelo Trópico de Capricórnio, dois importantes paralelos da Terra.
+            </p>
+<button>❤️ <span>0</span></button>
+<button>😍 <span>0</span></button>
+        </div>
+</article>
+<article>
+<img src="himalaia.jpg" alt="Foto da Professora Juliana">
+
+        <div>
+
+            <h2>Meu Quarto Post</h2>
+
+            <p class="artigo-autor">Por Juliana Siqueira</p>
+
+            <p class="texto">
+                O Monte Everest, localizado na cordilheira do Himalaia, é o ponto mais alto da Terra, com cerca de 8.849 metros de altitude.
+            </p>
+            <p class="artigo fonte"> Fonte: Chat GPT</p>
+<button>❤️ <span>0</span></button>
+<button>😍 <span>0</span></button>
+        </div>
+</article>
         
         
 
     </main>
-<script>
-    const botoes = document.querySelectorAll("button");
-
-    botoes.forEach( function (botao){
-        let curtiu = false;
-botao.addEventListener("click",botaoClicado);
-
-function botaoClicado() {
-        console.log("fui clicado");
-        let texto = botao.querySelector ("span");
-        if (curtiu === false) {
-             texto.textContent++;
-             curtiu = true;
-        } else{
-            texto.textContent--;
-            curtiu = false;
-        }
-       
-        }
-    })
-    
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
